@@ -111,7 +111,7 @@ Use String.fromCharCode to create the word "Hell".
 Assign the result to a variable named wordFromCodePoints.
 */
 
-let wordFromCodePoints = String.fromCharCode(72) + String.fromCharCode(101) + String.fromCharCode(108) + String.fromCharCode(108);
+let wordFromCodePoints = String.fromCharCode(72) + String.fromCharCode(101) + String.fromCharCode(108) + String.fromCharCode(108); // Hell
 wordFromCodePoints = String.fromCharCode(74, 97, 118, 97, 83, 99, 114, 105, 112, 116);
 console.log(`wordFromCodePoints="${wordFromCodePoints}"`);
 
