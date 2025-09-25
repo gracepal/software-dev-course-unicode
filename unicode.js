@@ -101,8 +101,9 @@ Assign the results to variables named firstCodePoint and thirdCodePoint.
 */
 
 let inputString1 = 'Code';
-let firstCodePoint = inputString1.charCodeAt(0);
-let thirdCodePoint = inputString1.charCodeAt(2);
+let firstCodePoint = inputString1.charCodeAt(0); // C = 67
+let thirdCodePoint = inputString1.charCodeAt(2); // d = 100
+console.log(`firstCodePoint=${firstCodePoint}, thirdCodePoint=${thirdCodePoint}`);
 
 /* Task 2: Create a Word from Code Points
 Use the Unicode code points 72, 101, 108, and 108 (corresponding to the characters H, e, l, and l).
@@ -111,6 +112,8 @@ Assign the result to a variable named wordFromCodePoints.
 */
 
 let wordFromCodePoints = String.fromCharCode(72) + String.fromCharCode(101) + String.fromCharCode(108) + String.fromCharCode(108);
+wordFromCodePoints = String.fromCharCode(74, 97, 118, 97, 83, 99, 114, 105, 112, 116);
+console.log(`wordFromCodePoints="${wordFromCodePoints}"`);
 
 /* Task 3: Swap First and Last Characters
 Take the string "Launch".
@@ -120,9 +123,14 @@ Assign the result to a variable named swappedString.
 */
 
 let inputString2 = 'Launch';
-let firstCharCodePoint = inputString2[0].charCodeAt(0);
-let lastCharCodePoint = inputString2[inputString2.length - 1].charCodeAt(0);
+let firstCharCodePoint = inputString2.charCodeAt(0); // 76
+let lastCharCodePoint = inputString2.charCodeAt(inputString2.length - 1); // 104
 let swappedString = String.fromCharCode(lastCharCodePoint) + inputString2.slice(1, inputString2.length - 1) + String.fromCharCode(firstCharCodePoint);
+
+console.log(`inputString2="${inputString2}"
+firstCharCodePoint=${firstCharCodePoint}
+lastCharCodePoint=${lastCharCodePoint}
+swappedString="${swappedString}"`);
 
 // Log all results
 console.log({
@@ -147,10 +155,16 @@ console.log({
 // Practice Problem #2
 // ***************************************************************/
 
+// firstCodePoint=67, thirdCodePoint=100
+// wordFromCodePoints="JavaScript"
+// inputString2="Launch"
+// firstCharCodePoint=76
+// lastCharCodePoint=104
+// swappedString="hauncL"
 // {
 //   firstCodePoint: 67,
 //   thirdCodePoint: 100,
-//   wordFromCodePoints: 'Hell',
+//   wordFromCodePoints: 'JavaScript',
 //   swappedString: 'hauncL'
 // }
 // ➜  software-dev-course-unicode git:(main) ✗
