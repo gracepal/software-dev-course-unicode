@@ -1,8 +1,8 @@
-/*
-
+/**************************************************************
 Practice Problem #1
+***************************************************************/
 
-Exercise 1: Retrieve and Add Two Code Points
+/* Exercise 1: Retrieve and Add Two Code Points
 Objective: Extract the Unicode code points of the first two characters of a string,
 add them together, and return the result.
 
@@ -15,8 +15,9 @@ let inputString = "Hi";
 
 Expected Output:
 sumCodePoints: 177 // 'H' = 72, 'i' = 105, 72 + 105 = 177
+*/
 
-Exercise 2: Generate a String from Two Code Points
+/* Exercise 2: Generate a String from Two Code Points
 Objective: Take two numeric Unicode code points,
 convert them to characters using String.fromCharCode,
 and combine them into a single string.
@@ -31,8 +32,9 @@ let codePoint2 = 66;
 
 Expected Output:
 combinedString: "AB" // 65 = 'A', 66 = 'B', combined = "AB"
+*/
 
-Exercise 3: Find the Character Difference
+/* Exercise 3: Find the Character Difference
 Objective: Extract the Unicode code points of two given characters from a string
 and calculate the absolute difference between them.
 
@@ -47,9 +49,9 @@ let index2 = 2;
 
 Expected Output:
 codePointDifference: 16 // 'C' = 67, 't' = 116, |67 - 116| = 16
+*/
 
-
-
+/**************************************************************
 Practice Problem #2
 
 Objective
@@ -63,37 +65,34 @@ between characters and their Unicode code points.
 Write JavaScript code to complete each task,
 ensuring you assign your results to the specified variables.
 Log all results to the console.
+***************************************************************/
 
-Tasks:
-Task 1: Extract Code Points from Characters
+/* Task 1: Extract Code Points from Characters
 Take the string "Code".
 Use charCodeAt to extract the Unicode code points of the first and third characters.
 Assign the results to variables named firstCodePoint and thirdCodePoint.
+*/
 
-Task 2: Create a Word from Code Points
+let inputString1 = 'Code';
+let firstCodePoint; // Your code here
+let thirdCodePoint; // Your code here
+
+/* Task 2: Create a Word from Code Points
 Use the Unicode code points 72, 101, 108, and 108 (corresponding to the characters H, e, l, and l).
 Use String.fromCharCode to create the word "Hell".
 Assign the result to a variable named wordFromCodePoints.
+*/
 
-Task 3: Swap First and Last Characters
+let wordFromCodePoints; // Your code here
+
+/* Task 3: Swap First and Last Characters
 Take the string "Launch".
 Extract the Unicode code points of the first and last characters using charCodeAt.
 Use String.fromCharCode to swap these characters and create a new string: "hauncL".
 Assign the result to a variable named swappedString.
-
 */
 
-//Starter Code
-// Task 1
-let inputString1 = "Code";
-let firstCodePoint; // Your code here
-let thirdCodePoint; // Your code here
-
-// Task 2
-let wordFromCodePoints; // Your code here
-
-// Task 3
-let inputString2 = "Launch";
+let inputString2 = 'Launch';
 let swappedString; // Your code here
 
 // Log all results
