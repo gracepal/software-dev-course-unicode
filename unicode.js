@@ -2,6 +2,12 @@
 Practice Problem #1
 ***************************************************************/
 
+console.log(`
+/**************************************************************
+Practice Problem #1
+***************************************************************/
+`);
+
 /* Exercise 1: Retrieve and Add Two Code Points
 Objective: Extract the Unicode code points of the first two characters of a string,
 add them together, and return the result.
@@ -16,6 +22,10 @@ let inputString = "Hi";
 Expected Output:
 sumCodePoints: 177 // 'H' = 72, 'i' = 105, 72 + 105 = 177
 */
+
+let ex1Str = 'Hello World!';
+let sumCodePoints = ex1Str.charCodeAt(2) + ex1Str.charCodeAt(3);
+console.log(`Exercise 1: string="${ex1Str}", sumCodePoints of 2 "l"s is ${sumCodePoints}`);
 
 /* Exercise 2: Generate a String from Two Code Points
 Objective: Take two numeric Unicode code points,
@@ -34,6 +44,11 @@ Expected Output:
 combinedString: "AB" // 65 = 'A', 66 = 'B', combined = "AB"
 */
 
+let codePoint1 = 72; // H
+let codePoint2 = 105; // i
+let combinedString = String.fromCharCode(codePoint1) + String.fromCharCode(codePoint2);
+console.log(`Exercise 2: combinedString="${combinedString}", from codePoint1=${codePoint1} and codePoint2=${codePoint2}`);
+
 /* Exercise 3: Find the Character Difference
 Objective: Extract the Unicode code points of two given characters from a string
 and calculate the absolute difference between them.
@@ -51,6 +66,12 @@ Expected Output:
 codePointDifference: 16 // 'C' = 67, 't' = 116, |67 - 116| = 16
 */
 
+let ex2Str = 'dog';
+let index1 = 0;
+let index2 = 2;
+let codePointDifference = Math.abs(ex2Str.charCodeAt(index1) - ex2Str.charCodeAt(index2));
+console.log(`Exercise 3: codePointDifference=${codePointDifference}, between '${ex2Str[index1]}' and '${ex2Str[index2]}'`);
+
 /**************************************************************
 Practice Problem #2
 
@@ -67,6 +88,12 @@ ensuring you assign your results to the specified variables.
 Log all results to the console.
 ***************************************************************/
 
+console.log(`
+/**************************************************************
+Practice Problem #2
+***************************************************************/
+`);
+
 /* Task 1: Extract Code Points from Characters
 Take the string "Code".
 Use charCodeAt to extract the Unicode code points of the first and third characters.
@@ -74,8 +101,8 @@ Assign the results to variables named firstCodePoint and thirdCodePoint.
 */
 
 let inputString1 = 'Code';
-let firstCodePoint; // Your code here
-let thirdCodePoint; // Your code here
+let firstCodePoint = inputString1.charCodeAt(0);
+let thirdCodePoint = inputString1.charCodeAt(2);
 
 /* Task 2: Create a Word from Code Points
 Use the Unicode code points 72, 101, 108, and 108 (corresponding to the characters H, e, l, and l).
@@ -83,7 +110,7 @@ Use String.fromCharCode to create the word "Hell".
 Assign the result to a variable named wordFromCodePoints.
 */
 
-let wordFromCodePoints; // Your code here
+let wordFromCodePoints = String.fromCharCode(72) + String.fromCharCode(101) + String.fromCharCode(108) + String.fromCharCode(108);
 
 /* Task 3: Swap First and Last Characters
 Take the string "Launch".
@@ -93,7 +120,9 @@ Assign the result to a variable named swappedString.
 */
 
 let inputString2 = 'Launch';
-let swappedString; // Your code here
+let firstCharCodePoint = inputString2[0].charCodeAt(0);
+let lastCharCodePoint = inputString2[inputString2.length - 1].charCodeAt(0);
+let swappedString = String.fromCharCode(lastCharCodePoint) + inputString2.slice(1, inputString2.length - 1) + String.fromCharCode(firstCharCodePoint);
 
 // Log all results
 console.log({
@@ -102,3 +131,26 @@ console.log({
   wordFromCodePoints,
   swappedString,
 });
+
+// Output Reference:
+// ➜  software-dev-course-unicode git:(main) ✗ node unicode.js
+
+// /**************************************************************
+// Practice Problem #1
+// ***************************************************************/
+
+// Exercise 1: string="Hello World!", sumCodePoints of 2 "l"s is 216
+// Exercise 2: combinedString="Hi", from codePoint1=72 and codePoint2=105
+// Exercise 3: codePointDifference=3, between 'd' and 'g'
+
+// /**************************************************************
+// Practice Problem #2
+// ***************************************************************/
+
+// {
+//   firstCodePoint: 67,
+//   thirdCodePoint: 100,
+//   wordFromCodePoints: 'Hell',
+//   swappedString: 'hauncL'
+// }
+// ➜  software-dev-course-unicode git:(main) ✗
